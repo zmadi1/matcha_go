@@ -1,0 +1,40 @@
+<%
+package views
+
+import (
+    "github.com/gmohlamo/matcha/views/components"
+    "github.com/gmohlamo/matcha/views/components/headers"
+)
+
+func RenderIndex(w io.Writer) {
+%>
+<head>
+<%
+produceHead(w, headers.IndexStyles, headers.IndexScripts)
+%>
+</head>
+<body>
+    <section class="hero is-primary is-bold is-fullheight" style="align-items: center; justify-content: center;">
+        <div class="hero-body">
+        <div class="container" style="text-align: center;">
+            <h1 class="title is-large">
+            Lovr
+            </h1>
+            <h2 class="subtitle is-large">
+            Dating App
+            </h2>
+            <div class="container" id="landing_modals">
+              <%
+              components.LoginModal(w)
+              components.RegisterModal(w)
+              %>
+                <div class="buttons is-centered">
+                    <center><span class="button is-small is-primary is-inverted is-small" style="margin-right: 5px;" id="login">Login</span></center>
+                    <center><span class="button is-small is-primary is-inverted is-small" style="margin-left: 5px;" id="register">Register</span></center>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+<% } %>

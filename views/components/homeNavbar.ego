@@ -1,0 +1,48 @@
+<%
+package components
+
+import "github.com/blavkboy/matcha/models"
+import "strings"
+
+func HomeNavbar(w io.Writer, u *models.User) {
+%>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation" style="width: 100%;">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="matchaNavbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="home-navbar" class="navbar-menu is-primary">
+    <div class="navbar-start">
+      <% if strings.Compare("guest", u.Username) != 0 { %>
+      <a class="navbar-item">
+        Home
+      </a>
+      <a class="navbar-item">
+        Profile
+      </a>
+      <a class="navbar-item">
+        Matches
+      </a>
+      <% } %>
+      <a class="navbar-item">
+        Users
+      </a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Logout</strong>
+          </a>
+          <a class="button is-primary">
+            Search users
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<% } %>

@@ -1,0 +1,43 @@
+Matcha db.go:37: mongodb session struct:  &{{{0 0} 0 0 0 0} 0xc0000fe000 <nilMatcha matcha.go:29: Starting 'Matcha' dating service API
+Matcha routing.go:113: Saving user with password:  $2a$06$VBGNBF3N8pjHwJr1Iw93IefrzKU9UvprQaRGRB0s0Ko0VjyBgCw0q
+Matcha user.go:142: Error:  not found
+Matcha user.go:142: Error:  not found
+Matcha user.go:57: Ensured Index
+Matcha user.go:64: Inserting User
+Matcha routing.go:131: 2020-01-10 17:22:57.712585646 +0200 SAST m=+30.286882540
+Matcha routing.go:132: {ObjectIdHex("5e1896d168238c15d8024c09") zack zack zack  zack@zack.com $2a$06$VBGNBF3N8pjHwJr1Iw93IefrzKU9UvprQaRGRB0s0Ko0VjyBgCw0q {Point []} {false 0 0 0  []  [] 0 0}}
+Matcha routing.go:113: Saving user with password:  $2a$06$nJ6FHv6SzYebOUbkTe5kB.8TUYZg0y6mvfTvtZ/g1WE4.YCc/Axqq
+Matcha routing.go:113: Saving user with password:  $2a$06$wcIol8w5asU65asj4NRsvOm8UVWGDWz8G/TP6BIeV5gq6zBkyLaga
+Matcha user.go:142: Error:  not found
+Matcha user.go:142: Error:  not found
+Matcha user.go:57: Ensured Index
+Matcha user.go:64: Inserting User
+Matcha routing.go:131: 2020-01-10 17:30:29.504156264 +0200 SAST m=+482.078453027
+Matcha routing.go:132: {ObjectIdHex("5e18989568238c15d8024c0a") mike mike mike  michael@mike.com $2a$06$wcIol8w5asU65asj4NRsvOm8UVWGDWz8G/TP6BIeV5gq6zBkyLaga {Point []} {false 0 0 0  []  [] 0 0}}
+Matcha routing.go:113: Saving user with password:  $2a$06$VRx.SbpeSQQlBg05KHACeOEH9JEeqyOVkEXfd8gIMwut5VbeN26b6
+Matcha user.go:142: Error:  not found
+Matcha user.go:142: Error:  not found
+Matcha user.go:57: Ensured Index
+Matcha user.go:64: Inserting User
+Matcha routing.go:131: 2020-01-10 17:34:58.55350815 +0200 SAST m=+751.127804965
+Matcha routing.go:132: {ObjectIdHex("5e1899a268238c15d8024c0b") zakhele madi madi  mzekemadi@gmail.com $2a$06$VRx.SbpeSQQlBg05KHACeOEH9JEeqyOVkEXfd8gIMwut5VbeN26b6 {Point []} {false 0 0 0  []  [] 0 0}}
+Matcha user.go:142: Error:  not found
+Matcha user.go:142: Error:  not found
+Matcha routing.go:113: Saving user with password:  $2a$06$OpEyEsZ0nzG4JMZb2Bn53eNtBPPhIzcqIA7t7tFsnVeCyasvloQz.
+Matcha user.go:142: Error:  not found
+Matcha user.go:142: Error:  not found
+Matcha user.go:57: Ensured Index
+Matcha user.go:64: Inserting User
+Matcha routing.go:131: 2020-01-10 17:37:12.811538999 +0200 SAST m=+885.385835755
+Matcha routing.go:132: {ObjectIdHex("5e189a2868238c15d8024c0c") aaphane andries aphane  aaphane@student.wethinkcode.co.za $2a$06$OpEyEsZ0nzG4JMZb2Bn53eNtBPPhIzcqIA7t7tFsnVeCyasvloQz. {Point []} {false 0 0 0  []  [] 0 0}}
+Matcha auth.go:38: Password match for user:  true
+Matcha auth.go:45: DEBUG INFO user_id:  ObjectIdHex("5e189a2868238c15d8024c0c")
+Matcha routing.go:59: Sending user: 
+Matcha user.go:167: Failed to obtain users
+Matcha user.go:168: Error:  invalid point in geo near query $geometry argument: { type: "Point", coordinates: [] }  Point must only contain numeric elements
+Matcha routing.go:59: Sending user: 
+Matcha user.go:167: Failed to obtain users
+Matcha user.go:168: Error:  invalid point in geo near query $geometry argument: { type: "Point", coordinates: [] }  Point must only contain numeric elements
+Matcha routing.go:59: Sending user: 
+Matcha user.go:167: Failed to obtain users
+Matcha user.go:168: Error:  invalid point in geo near query $geometry argument: { coordinates: [], type: "Point" }  Point must only contain numeric elements

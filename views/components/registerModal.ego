@@ -1,0 +1,67 @@
+<%
+package components
+
+func RegisterModal(w io.Writer) {
+%>
+<div class="container">
+    <div class="modal" id="register_modal">
+        <div class="modal-card animated jackInTheBox" style="width: minmax(250px, 800px); padding: 5%;">
+        <header class="modal-card-head">
+        <p class="modal-card-title">Lovr Register</p>
+        <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body has-icons-left has-icons-right">
+        <!-- put content here -->
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+            <input class="input" id="reg_email" type="email" placeholder="Enter email address" value="">
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Username</label>
+            <div class="control has-icons-left has-icons-right">
+            <input class="input" id="reg_username" type="text" placeholder="Desired username" value="">
+            <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+            </span>
+            </div>
+        </div>
+
+        <div class="field">
+          <label class="label">First Name</label>
+          <div class="control has-icons-left has-icons-right">
+          <input class="input" id="reg_fname" type="text" placeholder="Enter First Name" value="">
+        </div>
+
+        <div class="field">
+          <label class="label">Last Name</label>
+          <div class="control has-icons-left has-icons-right">
+          <input class="input" id="reg_lname" type="text" placeholder="Enter Last Name" value="">
+        </div>
+
+        <div class="field">
+            <label class="label">Password</label>
+            <div class="control has-icons-left has-icons-right">
+            <input class="input" id="reg_password" type="password" placeholder="Password" value="">
+            <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+            </span>
+            </div>
+        </div>
+        </section>
+        <footer class="modal-card-foot">
+        <p class="control">
+            <button class="button is-primary is-medium is-fullwidth" id="register_button">
+            Register
+            </button>
+        </p>
+        </footer>
+        </div>
+    </div>
+</div>
+<% } %>

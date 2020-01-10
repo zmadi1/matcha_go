@@ -1,0 +1,32 @@
+<%
+package views
+
+import "github.com/gmohlamo/matcha/views/components/headers"
+import "github.com/gmohlamo/matcha/views/components"
+import "github.com/gmohlamo/matcha/models"
+
+func RenderHome(w io.Writer, u *models.User) {
+%>
+<head>
+<%
+produceHead(w, headers.HomeStyles, headers.HomeScripts)
+%>
+</head>
+<body style="height:100%; width:100%;">
+  <%
+    components.HomeNavbar(w, u)
+  %>
+  <div class="columns"> 
+    <div class="column is-one-quarter">
+      <%
+        components.HomeSidePanel(w, u)
+      %>
+    </div>
+    <div class="column is-three-quarters" id="rightColumn">
+      <%
+        components.RenderProfileColumn(w, u)
+      %>
+    </div>
+  </div>
+</body>
+<% } %>

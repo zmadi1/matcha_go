@@ -1,0 +1,108 @@
+<%
+package components
+
+import "github.com/blavkboy/matcha/models"
+
+func RenderProfileColumn(w io.Writer, u *models.User) {
+%>
+<div class="container" id="main_column" style="grid-row: 1; grid-column: 1;">
+  <!-- home component -->
+  <div class="container" id="picture" style="width: 120px;">
+  <% if u.Profile.Propic == "" { %>
+    <img src="http://localhost:8080/static/defaultpic.jpg" alt="profile picture">
+  <% } else { %>
+    <img src="<% fmt.Fprint(w, u.Profile.Propic) %>" id="propic"> 
+  <% } %>
+    <div class="field">
+      <div class="file is-success is-small is-rounded">
+        <label class="file-label">
+          <input class="file-input" type="file" name="resume" id="propic">
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Profile Picture
+            </span>
+          </span>
+        </label>
+      </div>
+    </div>
+    <span class="button is-success is-small" id="picsubmit">Update Picture</span>
+  </div>
+  <div style="grid-row:1/2; grid-column: 2;">
+    <form>
+      <div class="field">
+        <label class="label">First Name</label>
+        <div class="control">
+          <input id="fname" class="input is-medium" type="text" placeholder="<% fmt.Fprint(w, u.Fname) %>">
+        </div>
+      </div>
+      
+      <div style="field">
+        <label class="label">Last Name</label>
+        <div class="control">
+          <input id="lname" class="input is-medium" type="text" placeholder="<% fmt.Fprint(w, u.Lname) %>">
+        </div>
+      </div>
+      
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input id="email" class="input is-medium" type="text" placeholder="<% fmt.Fprint(w, u.Email) %>">
+        </div>
+        <p class="help">Changing your email will require you to confirm your email in order to use key features again</p>
+      </div>
+      
+      <div class="field">
+        <label class="label">Gender</label>
+        <div class="control">
+          <div class="select">
+            <select id="gender" <% if u.Sex == "" {
+              fmt.Fprint(w, "required")
+            }%>>
+            <%
+              sex := [4]string{"Select", "Male", "Female", "Other"}
+              for _, val := range sex { %>
+                <option><% fmt.Fprint(w, val) %></option>
+            <% } %>
+            </select>
+          </div>
+        </div>
+      </div>
+      <p class="subtitle is-5" id="sexTitle"><% fmt.Fprint(w, u.Sex) %></p>
+      
+      <div class="field">
+        <label class="label">Who are interested in meeting?</label>
+        <div class="control">
+          <div class="select">
+            <select id="orientation" <% if u.Profile.Orientation == "" {
+              fmt.Fprint(w, "required")
+            } %>>
+              <%
+                orientation := [4]string{"Select", "Men", "Women", "Both"}
+                for _, val := range orientation { %>
+                  <option><% fmt.Fprint(w, val) %></option>
+              <% } %>
+            </select>
+          </div>
+        </div>
+      </div>
+      <p class="subtitle is-5" id="orientationTitle"><% fmt.Fprint(w, u.Profile.Orientation) %></p>
+      
+      <div class="field">
+        <label class="label">Interests</label>
+        <div class="control">
+          <textarea class="textarea is-medium" placeholder="Enter your interests in here like you would a series of twitter hash tags"></textarea>
+        </div>
+      </div>
+      <div class="buttons">
+        <span class="button is-success" id="submit">Submit Changes</span>
+        <span class="button is-success" id="pwChange">Change Password</span>
+      </div>
+    </div>
+  </form>
+  <!-- home component -->
+</div>
+<script type="text/javascript" src="/static/js/profileSelect.js"></script>
+<% } %>

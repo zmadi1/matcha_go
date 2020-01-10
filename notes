@@ -1,0 +1,20 @@
+get these dependencies
+go get github.com/gorilla/mux
+go get github.com/gorilla/context
+go get github.com/mitchellh/mapstructure
+go get github.com/dgrijalva/jwt-go
+
+Web api authentication:
+1. The client sends login credentials which are validated against a database.
+  - if they are valid:
+    * A token is generated based on a sample set of data along with a secret key that only the server knows about
+2. The token is returned to the client and the client uses this in any future request.
+  - When a request contains a JSON Web Token, it is validated using the same secret key that was used to sign in.
+////////////////////////////////////////////////////////////////////////////////////
+Info on packages:
+mux - multiplexer which will make routing easier and allow middleware to be made with far greater ease
+context - will help with passing data around
+jwt-go - will help us make and authenticate JSON Web Tokens
+mapstructure - will help return our data as custom map structures
+////////////////////////////////////////////////////////////////////////////////////
+3. 

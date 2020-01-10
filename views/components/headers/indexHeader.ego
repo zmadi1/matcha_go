@@ -1,0 +1,12 @@
+<%
+package headers
+
+func IndexStyles(w io.Writer) {
+%>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/static/css/custom.css">
+<% }
+
+func IndexScripts(w io.Writer) {
+%>
+<script src="http://localhost:8080/static/js/index.js"></script>
+<% } %>
